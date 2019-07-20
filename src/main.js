@@ -4,8 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+// import './assets/styles/reset.css'
+// import './assets/styles/border.css'
+// import './assets/styles/iconfont.css'
+// build/webpack.base.con.js中第34行设置简略文件路径别名：styles
+import 'styles/reset.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)

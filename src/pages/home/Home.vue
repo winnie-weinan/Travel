@@ -13,8 +13,7 @@ export default {
 
 <style >
   .home{
-    font-size:20px;
-    color:hotpink;
+    font-size:50px;
     text-decoration: none;
   }
 </style>

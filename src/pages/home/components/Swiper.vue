@@ -6,7 +6,7 @@
     <swiper-slide v-for="item of swiperList" :key="item.id">
       <img class="swiper-img" :src="item.imgUrl" alt="I'm Slide 1">
     </swiper-slide>
-    <!-- Optional controls -->
+    <!-- Optional controls 通过slot把数据传递给页面的组件-->
     <div class="swiper-pagination"  slot="pagination"></div>
     <!--轮播左右箭头不需要删掉-->
     <!--<div class="swiper-button-prev" slot="button-prev"></div>-->

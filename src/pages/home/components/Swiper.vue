@@ -14,6 +14,7 @@
     <!--背景灰色小条去掉-->
     <!--<div class="swiper-scrollbar"   slot="scrollbar"></div>-->
   </swiper>
+  <h1>this is new tag</h1>
 </div>
 </template>
 

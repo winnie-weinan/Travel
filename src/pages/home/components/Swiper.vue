@@ -1,9 +1,10 @@
 <template>
 <!--撑开高度解决抖动-->
 <div class="wrapper">
-  <swiper :options="swiperOption" >
+  <!--轮播默认显示第四张图片，使用v-if解决:v-if="list.length"或者更优雅的 v-if="showSwiper"-->
+  <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
-    <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper-slide v-for="item of list" :key="item.id">
       <img class="swiper-img" :src="item.imgUrl" alt="I'm Slide 1">
     </swiper-slide>
     <!-- Optional controls 通过slot把数据传递给页面的组件-->
@@ -20,19 +21,20 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1609/47/0cfdc871ac183702.jpg_750x200_f6896acd.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/f4168ba20e0f5218ed83e743efd802b2.jpg_750x200_53edd3a0.jpg'
-      }]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }
@@ -47,7 +49,7 @@ export default {
     width: 100%
     height: 0
     /*图片宽高比：640/200=31.25，宽高比例始终保持在31.25%,高度相对于100%的宽度自动撑开31.25%*/
-    padding-bottom: 26.67%
+    padding-bottom: 31.25%
     background: #eee
     .swiper-img
       width :100%

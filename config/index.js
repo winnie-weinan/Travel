@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      './api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          //一旦请求的地址是以api开头的，就把路径替换至mock webpack-dev-server提供的办法
+          '^/api' : '/static/mock'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

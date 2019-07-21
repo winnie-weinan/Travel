@@ -3,7 +3,10 @@
     <div class="recommend-title">热销推荐</div>
     <ul>
     <!--1px的底边框-->
+    <!--ajax 前
     <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    -->
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
       <img class="item-img" :src="item.imgUrl" alt="">
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -18,6 +21,10 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  }
+  /*
   data () {
     return {
       recommendList: [{
@@ -38,6 +45,7 @@ export default {
       }]
     }
   }
+  */
 }
 </script>
 

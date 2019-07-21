@@ -14,7 +14,6 @@
     <!--背景灰色小条去掉-->
     <!--<div class="swiper-scrollbar"   slot="scrollbar"></div>-->
   </swiper>
-  <h1>this is new tag</h1>
 </div>
 </template>
 
@@ -48,7 +47,7 @@ export default {
     width: 100%
     height: 0
     /*图片宽高比：640/200=31.25，宽高比例始终保持在31.25%,高度相对于100%的宽度自动撑开31.25%*/
-    padding-bottom: 31.25%
+    padding-bottom: 26.67%
     background: #eee
     .swiper-img
       width :100%

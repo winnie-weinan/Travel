@@ -1,6 +1,7 @@
 <template>
   <ul class="list">
-    <li class="item" v-for="(item, key) of cities" :key="key">{{key}}</li>
+    <li class="item" v-for="(item, key) of cities"
+        :key="key" @click="headleLtterClick">{{key}}</li>
   </ul>
 </template>
 
@@ -9,6 +10,13 @@ export default {
   name: 'CityAlphabet',
   props: {
     cities: Object
+  },
+  methods: {
+    // 点击字母列表时，函数拿到一个对象：e
+    headleLtterClick (e) {
+      this.$emit('change', e.target.innerText)
+      console.log(e.target.innerText)
+    }
   }
 }
 </script>

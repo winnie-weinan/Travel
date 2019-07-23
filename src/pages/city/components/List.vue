@@ -41,14 +41,14 @@ export default {
     letter: String
   },
   mounted () {
-    this.Scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper)
   },
   watch: {
     letter () {
       if (this.letter) {
         const element = this.$refs[this.letter][0] // 获取
         this.scroll.scrollToElement(element)
-        console.log('list.vue this.letter:' + this.letter)
+        // console.log('list.vue this.letter:' + this.letter)
       }
     }
   }

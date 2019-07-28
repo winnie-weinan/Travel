@@ -9,8 +9,8 @@
     </div>
     <router-link to="./city">
       <div class="header-right">
-        <!--{{this.city}}-->
-        {{this.docubleCity}}
+        {{this.city}}
+        <!--{{this.docubleCity}}-->
         <!-- 使用mapstore映射前{{this.$store.state.city}}-->
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
@@ -19,12 +19,13 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+// import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
   computed: {
-    ...mapState(['city']),
-    ...mapGetters(['docubleCity'])
+    ...mapState(['city'])
+    // ...mapGetters(['docubleCity'])
   }
 }
 </script>

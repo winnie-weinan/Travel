@@ -20,10 +20,10 @@ export default new Vuex.Store({
   //   }
   // }
   state,
-  mutations,
-  getters: {
-    docubleCity (state) {
-      return state.city + ' ' + state.city
-    }
-  }
+  mutations
+  // getters: {
+  //   docubleCity (state) {
+  //     return state.city + ' ' + state.city
+  //   }
+  // }
 })

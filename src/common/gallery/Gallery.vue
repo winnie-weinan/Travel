@@ -53,7 +53,7 @@ export default {
     right: 0
     top: 0
     bottom: 0
-    background: pink
+    background: #000
     .wrapper
       height: 0
       width: 100%

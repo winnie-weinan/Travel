@@ -3,6 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <keep-alive exclued="Detail">
       <!--路由内容加载过一次以后，就把路由中的内容放在内存中-->
+      <!--<router-view/>-->
       <router-view/>
     </keep-alive>
   </div>

@@ -24,6 +24,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
   computed: {
+    // main.js中传入state，映射this.city等于store.state.city，调用vuex中state的数据
     ...mapState(['city'])
     // ...mapGetters(['docubleCity'])
   }

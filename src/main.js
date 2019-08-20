@@ -14,7 +14,7 @@ import 'swiper/dist/css/swiper.css'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
-
+// 它会显示你生产模式的消息
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)

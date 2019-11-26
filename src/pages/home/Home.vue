@@ -1,6 +1,7 @@
 <template>
   <div>
     <home-header></home-header>
+    <home-nav></home-nav>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
@@ -10,10 +11,12 @@
 
 <script>
 import HomeHeader from './components/Header'
+import HomeNav from './components/Nav'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
+import HomeTab from './components/Tab'
 import axios from 'axios'
 import {mapState} from 'vuex'
 
@@ -21,10 +24,12 @@ export default {
   name: 'Home',
   components: {
     HomeHeader,
+    HomeNav,
     HomeSwiper,
     HomeIcons,
     HomeRecommend,
-    HomeWeekend
+    HomeWeekend,
+    HomeTab
   },
   data () {
     return {
@@ -45,6 +50,7 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
+      // ajax拿到数据以后，要获取数据的内容
       res = res.data
       // 如果后端正确的返回结果，而且res中有data内容项
       if (res.ret && res.data) {

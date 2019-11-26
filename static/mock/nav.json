@@ -1,0 +1,16 @@
+{
+  "navData":[
+    {
+      "title":"主页",
+      "url":"/"
+    },
+    {
+      "title":"子页一",
+      "url":"/pageTwo"
+    },
+    {
+      "title":"子页二",
+      "url":"/pageThree"
+    }
+  ]
+}
